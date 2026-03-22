@@ -1,0 +1,47 @@
+# ============================================================
+# requirements.txt
+# Python 3.11.x  |  CUDA 12.4 (cu124) wheels
+#
+# IMPORTANT: Install PyTorch FIRST using install.bat (Windows)
+# or the pip command at the bottom of this file.
+# Then run:  pip install -r requirements.txt
+#
+# PyTorch is NOT listed here — install it separately below
+# because it needs a special --index-url flag.
+# ============================================================
+
+# ── Core deep learning ────────────────────────────────────────
+# torch, torchvision, torchaudio → installed via install.bat
+
+# ── Hugging Face (SegFormer backbone) ─────────────────────────
+transformers==4.44.2
+tokenizers==0.19.1
+huggingface-hub==0.24.7
+safetensors==0.4.5
+
+# ── Vision backbone utilities ─────────────────────────────────
+timm==1.0.9
+
+# ── Image augmentation ────────────────────────────────────────
+albumentations==1.4.15
+opencv-python==4.10.0.84
+
+# ── Numerics ──────────────────────────────────────────────────
+# Pin numpy < 2.0 — many libs still incompatible with numpy 2.x
+numpy==1.26.4
+Pillow==10.4.0
+scipy==1.14.1
+
+# ── Tensor manipulation ───────────────────────────────────────
+einops==0.8.0
+
+# ── Metrics & ML utils ────────────────────────────────────────
+scikit-learn==1.5.2
+
+# ── Training utilities ────────────────────────────────────────
+tqdm==4.66.5
+tensorboard==2.17.1
+tensorboardX==2.6.2.2
+
+# ── Config & logging ──────────────────────────────────────────
+PyYAML==6.0.2
